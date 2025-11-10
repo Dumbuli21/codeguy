@@ -154,6 +154,16 @@ nav{
 	padding-inline: 10vh;
 }
 
+.social_icons .icon a i {
+    color: #333;
+    font-size: 24px;
+    transition: 0.3s;
+}
+
+.social_icons .icon a i:hover {
+    color: #007bff; /* Change color when hovering */
+}
+
 /* ----- FEATURED BOX ----- */
 .featured-box{
 	position: relative;
@@ -635,3 +645,4 @@ footer{
 		width: 100%;
 	}
 }
+
