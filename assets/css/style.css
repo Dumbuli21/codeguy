@@ -15,7 +15,6 @@
 	--second-color: rgb(0, 201, 255);
 	--third-color: rgb(192, 166, 49);
     --first-shadow-color: rgba(0, 0, 0, 0.1);
-
 }
 
 /* ----- BASE ----- */
@@ -25,7 +24,6 @@
 	box-sizing: border-box;
 	font-family: 'poppins', sans-serif;
 }
-
 
 /* ----- SMOOTH SCROLL ----- */
 html{
@@ -47,6 +45,7 @@ html{
 ::-webkit-scrollbar-thumb:hover{
 	background: #bbb;
 }
+
 /* ---##-- REUSABLE CSS --##--- */
 
 /* ----- GLOBAL BUTTON DESIGN ----- */
@@ -61,13 +60,11 @@ html{
 }
 .btn>i{
 	margin-left: 10px;
-
 }
 .btn:hover{
 	background: var(--second-color);
 	color: var(--color-white);
 }
-
 
 /* ----- GLOBAL ICONS DESIGN ----- */
 i{
@@ -154,16 +151,6 @@ nav{
 	padding-inline: 10vh;
 }
 
-.social_icons .icon a i {
-    color: #333;
-    font-size: 24px;
-    transition: 0.3s;
-}
-
-.social_icons .icon a i:hover {
-    color: #007bff; /* Change color when hovering */
-}
-
 /* ----- FEATURED BOX ----- */
 .featured-box{
 	position: relative;
@@ -234,6 +221,7 @@ nav{
 .icon:hover{
 	color: var(--first-color);
 }
+
 /* ----- FEATURED IMAGE BOX ----- */
 .featured-image{
 	display: flex;
@@ -254,7 +242,6 @@ nav{
 	width: 380px;
 	height: 380px;
 	object-fit: cover;
-
 }
 
 @keyframes imgFloat {
@@ -279,7 +266,6 @@ nav{
 	background: var(--color-white);
 	border-radius: 30px;
 	box-shadow:  0 2px 5px 0 rgba(0, 0, 0, 0.25);
-
 }
 .scroll-btn i{
 	font-size: 20px;
@@ -300,7 +286,7 @@ nav{
 	width: 50%;
 }
 
-/* -- ## --- RESUABLE CSS -- ## -- */
+/* -- ## --- REUSABLE CSS -- ## -- */
 .top-header{
 	text-align: center;
 	margin-bottom: 5em;
@@ -333,7 +319,6 @@ h1{
 	box-shadow: 1px 8px 10px var(--first-shadow-color);
 	border-radius: 20px;
 }
-
 .about-info p{
 	text-align: center;
 	font-size: 15px;
@@ -370,6 +355,7 @@ h1{
 	padding: 2px 10px;
 	border-radius: 5px;
 }
+
 /* ----- PROJECTS BOX ----- */
 .project-container{
 	display: flex;
@@ -410,7 +396,6 @@ h1{
 	transition: .4s;
 	z-index: 1;
 }
-/*-----HII NDO INAPANDISHA NA KUSHUKA KATIKA PROJECT */
 .project-box:hover.project-box::after,
 .contact-info:hover.contact-info::after{
 	bottom: 0;
@@ -460,6 +445,7 @@ h1{
 	color: #777;
 	z-index: 2;
 }
+
 /* ----- CONTACT FORM ----- */
 .form-control{
 	display: flex;
@@ -503,7 +489,7 @@ textarea{
 }
 .form-button i{
 	font-size: 18px;
-	rotate: -45deg;/*inarotate icon hii */ 
+	rotate: -45deg;
 }
 
 /* ----- FOOTER BOX ----- */
@@ -518,7 +504,7 @@ footer{
 }
 .top-footer p{
 	font-size: 25px;
-	font-weight: 600;/*kama ku bold*/
+	font-weight: 600;
 }
 .middle-footer .footer-menu{
 	display: flex;
@@ -541,8 +527,7 @@ footer{
 	margin-top: 10px;
 }
 
-
-/* ----- MEDIA QUERY == 1024px / RESPONSIVE ----- */
+/* ----- MEDIA QUERY == 1024px ----- */
 @media only screen and (max-width: 1024px){
 	.featured-text{
 		padding: 0;
@@ -553,7 +538,7 @@ footer{
 	}
 }
 
-/* ----- MEDIA QUERY == 900px / RESPONSIVE ----- */
+/* ----- MEDIA QUERY == 900px ----- */
 @media only screen and (max-width: 900px) {
 	.nav-button{
 		display: none;
@@ -630,7 +615,8 @@ footer{
 		width: 80%;
 	}
 }
-/* ----- MEDIA QUERY == 540px / RESPONSIVE ----- */
+
+/* ----- MEDIA QUERY == 540px ----- */
 @media only screen and (max-width: 540px){
 	.featured-name{
 		font-size: 40px;
@@ -646,3 +632,113 @@ footer{
 	}
 }
 
+/* ======== NEW ENHANCEMENTS ADDED ======== */
+
+/* --- Improve icon hover animation --- */
+.icon a i {
+    color: var(--text-color-second);
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+.icon a i:hover {
+    color: var(--first-color);
+    transform: scale(1.2);
+}
+
+/* --- Add subtle hover animation to all social icons --- */
+.social_icons .icon {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.social_icons .icon:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Smooth hover for all nav links --- */
+.nav-link {
+    position: relative;
+    transition: color 0.3s ease;
+}
+.nav-link::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: -5px;
+    background-color: var(--first-color);
+    transition: width 0.3s ease;
+}
+.nav-link:hover {
+    color: var(--first-color);
+}
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* --- Button hover animation upgrade --- */
+.btn {
+    transition: all 0.3s ease;
+}
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* --- Subtle fade-in animation for section elements --- */
+.section {
+    animation: fadeInUp 0.8s ease both;
+}
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- Footer social icons hover effect --- */
+.footer-social-icons a i {
+    font-size: 20px;
+    color: var(--text-color-second);
+    transition: all 0.3s ease;
+}
+.footer-social-icons a i:hover {
+    color: var(--first-color);
+    transform: rotate(10deg) scale(1.2);
+}
+
+/* --- Add a glowing hover effect to project boxes --- */
+.project-box:hover {
+    box-shadow: 0px 8px 25px rgba(0, 201, 255, 0.3);
+    transform: translateY(-5px);
+    transition: all 0.4s ease;
+}
+
+/* --- Make scroll button more lively --- */
+.scroll-btn {
+    transition: all 0.3s ease;
+}
+.scroll-btn:hover {
+    transform: scale(1.05);
+    background: var(--first-color);
+    color: var(--color-white);
+}
+
+/* --- Slight responsive improvements for smaller devices --- */
+@media only screen and (max-width: 480px) {
+    .featured-name {
+        font-size: 32px;
+    }
+    .social_icons {
+        gap: 20px;
+    }
+    .icon {
+        width: 35px;
+        height: 35px;
+    }
+}
