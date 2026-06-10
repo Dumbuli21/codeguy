@@ -29,7 +29,7 @@ function myMenuFunction(){
 
 /* ----- for Automatic change names in a home ----- */
     var typingEffect = new Typed(".typedText", {
-      strings : ["Programmer", "Database Administrator"], 
+      strings : ["Software Developer", "Database Administrator"], 
       loop : true,
       typedSpeed : 100,
       backSpeed : 80,
